@@ -1,0 +1,40 @@
+.container {
+    max-width: 700px;
+}
+
+h3 {
+    font-family: "Playfair Display", "Georgia", Helvetica, Arial, sans-serif;
+    font-size: 2.6rem;
+    color: gray;
+    text-transform: lowercase;
+}
+
+.meta {
+    color: #c31;
+    font-family: "Unica One", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-top: -3px;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-family: "Playfair Display", "Georgia", Helvetica, Arial, sans-serif;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+    font-size: 3.4rem;
+}
+
+.rich-text {
+    font-family: "Georgia", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+}
+
+.rich-text a {
+    text-decoration:none;
+}
+
+.img-holder img {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+}

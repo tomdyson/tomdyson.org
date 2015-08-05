@@ -1,0 +1,46 @@
+{% load static wagtailuserbar %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="author" content="Tom Dyson">
+  <link rel="icon" href="http://38.media.tumblr.com/avatar_d38b764a6830_128.png"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display' type='text/css'>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Unica+One' type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+  <link rel="stylesheet" href="{% static 'css/swipebox.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tomdysonorg.css' %}">
+
+  {% block extra_css %}
+      {# Override this in templates to add extra stylesheets #}
+  {% endblock %}
+
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    {% wagtailuserbar %}
+
+    <div class="container">
+        <div class="row">
+            <div class="full column" style="margin-top: 5%">
+            {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {# Global javascript #}
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.swipebox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tomdysonorg.js' %}"></script>
+
+    {% block extra_js %}
+        {# Override this in templates to add extra javascript #}
+    {% endblock %}
+    
+</body>
+</html>
