@@ -3,3 +3,4 @@
 *.sqlite3
 *.py[cod]
 pip-log.txt
+media/*
