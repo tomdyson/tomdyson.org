@@ -3,7 +3,7 @@
 }
 
 h3 {
-    font-family: "Playfair Display", "Georgia", Helvetica, Arial, sans-serif;
+    font-family: "Alegreya", "Georgia", Helvetica, Arial, sans-serif;
     font-size: 2.6rem;
     color: gray;
     text-transform: lowercase;
@@ -17,19 +17,29 @@ h3 {
     margin-bottom: 3rem;
 }
 
+.blog_listing li {
+    margin-bottom: 0rem;
+}
+
+.blog_listing li .meta {
+     font-size:15px;
+}
+
 h2 {
-    font-family: "Playfair Display", "Georgia", Helvetica, Arial, sans-serif;
+    font-family: "Alegreya", "Georgia", Helvetica, Arial, sans-serif;
     text-transform: lowercase;
-    margin-bottom: 10px;
-    font-size: 3.4rem;
+    margin-bottom: 4px;
+    font-size: 3.6rem;
+    color: #36454F;
 }
 
-.rich-text {
-    font-family: "Georgia", Helvetica, Arial, sans-serif;
-    font-size: 19px;
+.rich-text, li {
+    font-family: "Alegreya", "Georgia", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #343434;
 }
 
-.rich-text a {
+.rich-text, li a {
     text-decoration:none;
 }
 

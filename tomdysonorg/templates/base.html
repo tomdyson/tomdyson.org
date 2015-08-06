@@ -10,7 +10,7 @@
   <link rel="icon" href="http://38.media.tumblr.com/avatar_d38b764a6830_128.png"/>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display' type='text/css'>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Alegreya' type='text/css'>
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Unica+One' type='text/css'>
   <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
   <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
@@ -28,19 +28,20 @@
     <div class="container">
         <div class="row">
             <div class="full column" style="margin-top: 5%">
-            {% block content %}{% endblock %}
+                <h3 style="margin-bottom: 3px">
+                    <a href = "/"><img src = "{% static 'img/tom-by-lauren.png' %}" width="24"/></a>
+                    / {{ self.title }}
+                </h3>
+                {% block content %}{% endblock %}
             </div>
         </div>
     </div>
 
     {# Global javascript #}
-    <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.swipebox.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/tomdysonorg.js' %}"></script>
 
     {% block extra_js %}
         {# Override this in templates to add extra javascript #}
     {% endblock %}
-    
 </body>
 </html>

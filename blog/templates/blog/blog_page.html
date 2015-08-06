@@ -7,12 +7,7 @@
 {% block body_class %}templage-blogpage{% endblock %}
 
 {% block content %}
-    <h3 style="margin-bottom: 3px">
-        <a href = "/"><img src = "{% static 'img/tom-by-lauren.png' %}" width="24"/></a>
-        / {{ self.title }}
-    </h3>
     <p class="meta">{{ self.date|date:"j F Y" }}</p>
-
     <div class="intro">{{ self.intro }}</div>
 
     {% if self.body %}
@@ -20,12 +15,12 @@
             {% if child.block_type == 'heading' %}
                 <h2>{{ child }}</h2>
             {% elif child.block_type == 'image' %}
-                    <div class="img-holder">
-                        {% image child.value width-1400 as blockimage %}
-                        <a href="{{ blockimage.url }}" class="swipebox">
-                            <img src="{{ blockimage.url }}" alt="{{ child.value.title }}" />
-                        </a>
-                    </div>
+                <div class="img-holder">
+                    {% image child.value width-1400 as blockimage %}
+                    <a href="{{ blockimage.url }}" class="swipebox">
+                        <img src="{{ blockimage.url }}" alt="{{ child.value.title }}" />
+                    </a>
+                </div>
             {% else %}
                 <div class="full column" style="margin-left: 0px">{{ child }}</div>
             {% endif %}
@@ -34,6 +29,8 @@
 {% endblock %}
 
 {% block extra_js %}
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.swipebox.js' %}"></script>
     <script type="text/javascript">
         ;( function( $ ) {
             $( '.swipebox' ).swipebox();

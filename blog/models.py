@@ -15,12 +15,17 @@ class BlogIndexPage(Page):
         FieldPanel('intro', classname="full")
     ]
 
+    @property
+    def blogs(self):
+        return BlogPage.objects.live().order_by('-date')
+
+
 class BlogPage(Page):
     date = models.DateField("Post date")
     body = StreamField([
-        ('heading', blocks.CharBlock(classname="full title")),
-        ('paragraph', blocks.RichTextBlock()),
-        ('image', ImageChooserBlock()),
+        ('heading', blocks.CharBlock(classname="full title", icon="title")),
+        ('paragraph', blocks.RichTextBlock(icon="pilcrow")),
+        ('image', ImageChooserBlock(icon="image")),
     ])
 
     search_fields = Page.search_fields + (
