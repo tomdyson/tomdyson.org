@@ -47,6 +47,9 @@ INSTALLED_APPS = (
     'wagtail.wagtailredirects',
     'wagtail.wagtailforms',
 
+    'django_medusa',
+    'wagtail.contrib.wagtailmedusa',
+
     'search',
     'home',
     'blog',
@@ -137,3 +140,7 @@ MEDIA_URL = '/media/'
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "tomdyson.org"
+
+MEDUSA_RENDERER_CLASS = 'django_medusa.renderers.DiskStaticSiteRenderer'
+MEDUSA_DEPLOY_DIR = os.path.join(BASE_DIR, '_build')
+SENDFILE_BACKEND = 'sendfile.backends.simple'
