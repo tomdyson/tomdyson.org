@@ -7,6 +7,7 @@ from wagtail.wagtailcore import blocks
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailsearch import index
 from wagtail.wagtailimages.blocks import ImageChooserBlock
+from wagtail.wagtailembeds.blocks import EmbedBlock
 
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
@@ -26,6 +27,7 @@ class BlogPage(Page):
         ('heading', blocks.CharBlock(classname="full title", icon="title")),
         ('paragraph', blocks.RichTextBlock(icon="pilcrow")),
         ('image', ImageChooserBlock(icon="image")),
+        ('embed', EmbedBlock(icon="media")),
     ])
 
     search_fields = Page.search_fields + (
