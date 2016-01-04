@@ -50,6 +50,9 @@ INSTALLED_APPS = (
     'django_medusa',
     'wagtail.contrib.wagtailmedusa',
     'wagtail.contrib.wagtailsearchpromotions',
+    'wagtail.contrib.settings',
+    'wagtail.contrib.wagtailapi',
+    'rest_framework',
 
     'search',
     'home',
